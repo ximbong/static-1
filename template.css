@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style-type: none;
+}
+
+.mainColor {
+  color:#2B4E5C;
+}
+
+.container {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#company_logo {
+  height:120px;
+  margin-bottom:30px;
+}
+
+header {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:70%;
+  margin:0 auto;
+  padding:10px 0 40px 0;
+}
+
+
+.navButton{
+
+  padding: 5px 15px;
+  background: #f4f4f4;
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #d6d6d6 100%, #7db9e8 100%);
+  background: -webkit-linear-gradient(top, #f4f4f4 0%,#d6d6d6 100%,#7db9e8 100%);
+  background: linear-gradient(to bottom, #f4f4f4 0%,#d6d6d6 100%,#7db9e8 100%);
+  display:inline-block;
+  border:2px solid #E9E8E9;
+  border-radius:5px;
+  margin:0 5px;
+  flex-basis:100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight:800;
+}
+
+section {
+  padding:0 15%;
+  background:blue;
+  display: grid;
+  grid-template-columns:3fr 2fr;
+  grid-template-rows: 200px 200px;
+  grid-template-areas:
+  "icon1 icon2"
+  "text icon2";
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 17%, #E2E6E9 18%, #BDD4DA 18%, #BDD4DA 18%, #BDD4DA 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 17%,#E2E6E9 18%,#BDD4DA 18%,#BDD4DA 18%,#BDD4DA 100%);
+  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 17%,#E2E6E9 18%,#BDD4DA 18%,#BDD4DA 18%,#BDD4DA 100%);
+}
+
+
+.sectionImgDiv {
+  grid-area: icon1;
+  display:flex;
+
+}
+
+.sectionImg {
+  width:200px;
+  height:200px;
+  border-radius:100px;
+  border:1px solid #E2E6E9;
+  margin-right:calc((100% - 600px)/3);
+}
+
+.humanImg {
+  grid-area:icon2;
+  background:url('assets/smiling-man.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+
+}
+
+.sectionImg {
+  grid-area: text;
+}
+
+#sectionImg1 {
+  background:url("assets/Meeting.jpeg");
+}
+
+
+#sectionImg2 {
+  background:url("assets/Flags.jpg");
+}
+
+
+#sectionImg3 {
+  background:url("assets/Chart.jpg");
+  background-position:20% 35%;
+}
+
+.description {
+  padding:30px 0;
+}
+
+.description p {
+  margin-top:20px;
+  font-size:90%;
+}
+.info {
+  padding:20px 15%;
+  display: grid;
+  grid-template-columns:1fr 2fr 1fr;
+  grid-template-areas:
+  "column1 column2 column3";
+  grid-gap:15px;
+}
+
+.columnLeft {
+  grid-area:column1;
+
+}
+
+.columnMiddle {
+  grid-area:column2;
+}
+
+.columnRight {
+  grid-area:column3;
+}
+
+.post {
+  border-bottom:2px dashed #918f8f;
+  padding:10px 0;
+}
+
+.columnMiddle .post:last-child {
+  display:grid;
+  min-height:150px;
+  grid-template-columns:200px 1fr;
+
+  grid-template-areas: "image div";
+
+  grid-gap:0 15px;
+}
+
+.postImg {
+  grid-area:image;
+  background:url('assets/discussing.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.postDiv {
+  grid-area:div;
+}
+
+.columnTitle {
+  font-size:120%;
+  text-transform: uppercase;
+  padding-top:10px;
+  font-weight:800;
+}
+
+
+
+.postTitle {
+  margin-bottom:5px;
+}
+
+.post:last-child {
+  border-bottom:none;
+}
+.postInfo span{
+  border-right: 1px solid #918f8f;
+  padding:0 5px;
+  color:#918f8f;
+}
+
+.postInfo span:first-child{
+  padding-left: 0;
+}
+
+.postInfo span:last-child{
+  border-right: none;
+}
+
+footer {
+  padding:25px 15%;
+  background:#F5F5F5;
+  text-align: center;
+  color:#81898B;
+}
+
+.countryInfo {
+  font-size: 120%;
+  font-weight:800;
+  text-transform: uppercase;
+  margin-bottom:5px;
+
+}
+
+.footerDiv {
+  display:flex;
+  justify-content: space-around;
+  margin-bottom:25px;
+}
+
+.iconInfo {
+  display:flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1366px) {
+  header {
+    width:90%;
+  }
+  .navButton {
+    font-size:80%;
+  }
+
+  section {
+    grid-template-rows: 150px minmax(200px,auto);
+    padding:0 5%;
+  }
+
+  .info {
+    padding: 20px 5%;
+  }
+
+  footer {
+    padding: 20px 5%;
+  }
+  .sectionImg {
+    width:150px;
+    height:150px;
+    margin-right:calc((100% - 450px)/3);
+  }
+}
